@@ -12,7 +12,6 @@ diag_log "INIT BEGINNT";
 enableSentences false;
 //***************************************************************************************************************************************************
 
-CURATOR1 addEventHandler ["CuratorGroupPlaced",{[_this select 1] spawn MSOT_system_fnc_setUnitSkill;}];
 
 If(isServer)then
 {
