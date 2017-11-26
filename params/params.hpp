@@ -13,10 +13,11 @@
     title = "Time of Day:";
     texts[] = {"01:00","02:00","03:00","04:00","05:00","06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00","00:00"};
     values[] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,0};
-		default = 10;
+		default = 8;
 		function = "BIS_fnc_paramDaytime";
   };
-
+  #define WEATHER_DEFAULT	25
+	#include "\a3\functions_f\Params\paramWeather.hpp"
   class play_faction
   {
     title = "Gegen welche Fraktion willst du spielen:";
@@ -45,7 +46,7 @@
     title = "Starte ohne Ausrüstung:";
     texts[] = {"Nein","Ja"};
     values[] = {0,1};
-    default = 1;
+    default = 0;
     isGlobal = 1;
   }
   class debug_modus
@@ -53,7 +54,7 @@
     title = "DEBUG MODUS:";
     texts[] = {"Nein","Ja"};
     values[] = {0,1};
-    default = 1;
+    default = 0;
     isGlobal = 1;
   }
   class msot_dummy_info_line2
