@@ -41,13 +41,8 @@ if(!hasInterface) exitwith {};
             hint "Adding abeschlossen";
             */
 
-            If(count POSESHELI > 0)then{
+           hint str (sideEnemy);
 
-            {
-              _bombname = createVehicle ["BO_GBU12_LGB",_x,[],0,"NONE"];
-              sleep (random 10);
-            }forEach POSESHELI;
-          };
 
           };
    case 3:{
