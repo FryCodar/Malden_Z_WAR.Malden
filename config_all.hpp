@@ -70,6 +70,7 @@ class CfgFunctions
 		#include "functions\spawnhelp\cfgFunctions.hpp"
 		#include "functions\geometry\cfgFunctions.hpp"
 		#include "functions\creating\cfgFunctions.hpp"
+		#include "functions\curator\cfgFunctions.hpp"
 };
 
 class CfgRemoteExec
@@ -90,4 +91,3 @@ class CfgRemoteExec
               jip = 1;
       };
 };
-
