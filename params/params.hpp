@@ -16,8 +16,6 @@
 		default = 8;
 		function = "BIS_fnc_paramDaytime";
   };
-  #define WEATHER_DEFAULT	25
-	#include "\a3\functions_f\Params\paramWeather.hpp"
   class play_faction
   {
     title = "Gegen welche Fraktion willst du spielen:";
