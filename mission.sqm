@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={8023.1279,51.524933,10170.885};
-		dir[]={0.034720853,-0.7698887,-0.63742417};
-		up[]={0.04187033,0.63795656,-0.7687304};
-		aside[]={-0.99868459,1.672518e-006,-0.054401241};
+		pos[]={7971.0625,83.467407,10247.04};
+		dir[]={0.81790781,-0.53094858,0.22217792};
+		up[]={0.51248878,0.84714532,0.13921005};
+		aside[]={0.26218566,1.9112194e-006,-0.96518523};
 	};
 };
 binarizationWanted=0;
@@ -3124,16 +3124,40 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={8033.708,31.983194,10040.316};
-				angles[]={0.0039967569,0,6.2791886};
+				position[]={8033.7085,31.982796,10040.316};
+				angles[]={0.0039968039,0,6.2791882};
 			};
 			side="Empty";
 			class Attributes
 			{
+				name="T5";
 			};
 			id=111;
 			type="B_MBT_01_mlrs_F";
-			atlOffset=0.25339699;
+			atlOffset=0.25300026;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ammoBox";
+					expression="[_this,_value] call bis_fnc_initAmmoBox;";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[[[[""arifle_MXC_F"",""FirstAidKit""],[2,10]],[[""SmokeShell"",""SmokeShellBlue"",""30Rnd_65x39_caseless_mag""],[2,2,4]],[[],[]],[[],[]]],false]";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 		class Item58
 		{
@@ -3181,13 +3205,12 @@ class Mission
 			class PositionInfo
 			{
 				position[]={7966.8501,29.956392,10064.003};
-				angles[]={0.0023920804,4.7245016,0};
+				angles[]={0.0023911009,4.7245016,0};
 			};
 			side="Empty";
 			flags=4;
 			class Attributes
 			{
-				name="T5";
 			};
 			id=113;
 			type="Land_HelipadCircle_F";
@@ -4319,7 +4342,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={8013.9272,29.73068,10156.646};
-				angles[]={-0,0.0055100941,0};
+				angles[]={0,0.0055100941,0};
 			};
 			side="Empty";
 			flags=4;
