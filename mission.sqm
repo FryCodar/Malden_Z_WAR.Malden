@@ -16,10 +16,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={7971.0625,83.467407,10247.04};
-		dir[]={0.81790781,-0.53094858,0.22217792};
-		up[]={0.51248878,0.84714532,0.13921005};
-		aside[]={0.26218566,1.9112194e-006,-0.96518523};
+		pos[]={7976.6382,79.093391,10206.25};
+		dir[]={0.52790189,-0.45062518,-0.72006947};
+		up[]={0.26651916,0.8924579,-0.36354291};
+		aside[]={-0.80661428,2.0592342e-006,-0.59135211};
 	};
 };
 binarizationWanted=0;
@@ -353,6 +353,25 @@ class CustomAttributes
 		name="Scenario";
 		class Attribute0
 		{
+			property="cba_settings_hasSettingsFile";
+			expression="false";
+			class Value
+			{
+				class data
+				{
+					class type
+					{
+						type[]=
+						{
+							"BOOL"
+						};
+					};
+					value=1;
+				};
+			};
+		};
+		class Attribute1
+		{
 			property="EnableDebugConsole";
 			expression="true";
 			class Value
@@ -370,7 +389,7 @@ class CustomAttributes
 				};
 			};
 		};
-		nAttributes=1;
+		nAttributes=2;
 	};
 };
 class Mission
@@ -2147,6 +2166,7 @@ class Mission
 				};
 			};
 			id=75;
+			atlOffset=-0.012207031;
 		};
 		class Item36
 		{
@@ -2165,6 +2185,7 @@ class Mission
 			};
 			id=76;
 			type="B_UGV_01_F";
+			atlOffset=-0.012207031;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2267,7 +2288,7 @@ class Mission
 				};
 			};
 			id=78;
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.012199402;
 		};
 		class Item38
 		{
@@ -2286,7 +2307,7 @@ class Mission
 			};
 			id=79;
 			type="B_UGV_01_rcws_F";
-			atlOffset=-1.9073486e-006;
+			atlOffset=-0.012199402;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2514,7 +2535,7 @@ class Mission
 				};
 			};
 			id=86;
-			atlOffset=-5.7220459e-006;
+			atlOffset=-0.012203217;
 		};
 		class Item42
 		{
@@ -2533,7 +2554,7 @@ class Mission
 			};
 			id=87;
 			type="B_UGV_01_rcws_F";
-			atlOffset=-5.7220459e-006;
+			atlOffset=-0.012203217;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -2734,6 +2755,7 @@ class Mission
 			};
 			id=97;
 			type="B_MRAP_01_hmg_F";
+			atlOffset=0.00018310547;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -3231,7 +3253,7 @@ class Mission
 			};
 			id=114;
 			type="B_Heli_Attack_01_dynamicLoadout_F";
-			atlOffset=-5.7220459e-006;
+			atlOffset=0.0099830627;
 			class CustomAttributes
 			{
 				class Attribute0
