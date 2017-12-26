@@ -55,10 +55,15 @@ missionNamespace setVariable [STRVAR_DO(play_intro),_play_intro,false];
 
 diag_log "INITPLAYERLOCAL: Starte INTRO";
 [] spawn MFUNC(intro,playintro);
+diag_log "INITPLAYERLOCAL: Starte TFAR FREQS";
+sleep 5;
+[] spawn MFUNC(tfar,addFreq);
 //____________________________________________________________
 waitUntil{!isNil "camera_run"};
 [] call MFUNC(setting,initPlayer);
 //____________________________________________________________
+/*
 diag_log "INITPLAYERLOCAL: Starte TFAR FREQS";
 sleep 5;
 [] spawn MFUNC(tfar,addFreq);
+*/
