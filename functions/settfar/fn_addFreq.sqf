@@ -11,25 +11,27 @@ _settingsLRInd = ["34.0","41.8","46.6","51.4","56.2","60.0","65.8","70.6","75.4"
 
 
 _guerCode = if ([west, independent] call BIS_fnc_sideIsFriendly) then {"_bluefor"} else {"_guer"};
-tf_freq_west = [0,7,_settingsSwWest,0,"_bluefor",-1,0,getplayerUID player,false];
-tf_freq_west_lr = [0,7,_settingsLRWest,0,"_bluefor",-1,0,false];
-tf_freq_east = [0,7,_settingsSwEast,0,"_opfor",-1,0,getplayerUID player,false];
-tf_freq_east_lr = [0,7,_settingsLREast,0,"_opfor",-1,0,false];
-tf_freq_guer = [0,7,_settingsSwInd,0,_guerCode,-1,0,getplayerUID player,false];
-tf_freq_guer_lr = [0,7,_settingsLRInd,0,_guerCode,-1,0,false];
+
+
+TFAR_setting_defaultFrequencies_sr_west = [0,7,_settingsSwWest,0,"_bluefor",-1,0,getplayerUID player,false];
+TFAR_setting_defaultFrequencies_sr_east = [0,7,_settingsSwEast,0,"_opfor",-1,0,getplayerUID player,false];
+TFAR_setting_defaultFrequencies_sr_independent = [0,7,_settingsSwInd,0,_guerCode,-1,0,getplayerUID player,false];
+TFAR_setting_defaultFrequencies_lr_west = [0,7,_settingsLRWest,0,"_bluefor",-1,0,false];
+TFAR_setting_defaultFrequencies_lr_east = [0,7,_settingsLREast,0,"_opfor",-1,0,false];
+TFAR_setting_defaultFrequencies_lr_independent = [0,7,_settingsLRInd,0,_guerCode,-1,0,false];
 
 
 _act_sets = [];
 _activeRadios = [] call TFAR_fnc_activeSwRadio;;
 If(!isNil "_activeRadios")then
 {
-  _act_sets = switch(side player)do
-              {
-                case (WEST):{tf_freq_west};
-                case (EAST):{tf_freq_east};
-                case (INDEPENDENT):{tf_freq_guer};
-                default {tf_freq_west};
-              };
+   _act_sets = switch(side player)do
+               {
+                 case (WEST):{TFAR_setting_defaultFrequencies_sr_west};
+                 case (EAST):{TFAR_setting_defaultFrequencies_sr_east};
+                 case (INDEPENDENT):{TFAR_setting_defaultFrequencies_sr_independent};
+                 default {TFAR_setting_defaultFrequencies_sr_west};
+               };
    If(count _act_sets > 0)then{[(call TFAR_fnc_activeSwRadio), _act_sets] call TFAR_fnc_setSwSettings;};
 };
 
@@ -38,14 +40,13 @@ _activeLRRadios = [] call TFAR_fnc_activeLrRadio;
 _act_sets = [];
 If(!isNil "_activeLRRadios")then
 {
-
-  _act_sets = switch(side player)do
-              {
-                case (WEST):{tf_freq_west_lr};
-                case (EAST):{tf_freq_east_lr};
-                case (INDEPENDENT):{tf_freq_guer_lr};
-                default {tf_freq_west_lr};
-              };
+   _act_sets = switch(side player)do
+               {
+                 case (WEST):{TFAR_setting_defaultFrequencies_lr_west};
+                 case (EAST):{TFAR_setting_defaultFrequencies_lr_east};
+                 case (INDEPENDENT):{tf_freq_guer_lr};
+                 default {TFAR_setting_defaultFrequencies_lr_independent};
+               };
    If(count _act_sets > 0)then{[(call TFAR_fnc_activeLrRadio) select 0, (call TFAR_fnc_activeLrRadio) select 1, _act_sets] call TFAR_fnc_setLrSettings;};
 };
 };
