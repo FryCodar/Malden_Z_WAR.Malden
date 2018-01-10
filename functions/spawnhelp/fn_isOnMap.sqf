@@ -14,11 +14,10 @@ Examples:
 Author: Fry
 Inspired from Nomisum
 -------------------------------------------------------------------------------------------------- */
-private ["_mapSize","_isinMap"];
 params ["_position"];
 
-_mapSize = getNumber (configFile>>"CfgWorlds">>worldName>>"mapSize");
-_isinMap = true;
+private _mapSize = getNumber (configFile>>"CfgWorlds">>worldName>>"mapSize");
+private _isinMap = true;
 
 switch(true)do
 {
